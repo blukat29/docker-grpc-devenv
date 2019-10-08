@@ -14,7 +14,7 @@ Suppose you have a C++ gRPC project with a Makefile.
 Move to the directory where Makefile is, and then
 
 ```
-docker run --rm -e MOUNT_GID=$(id -g) -e MOUNT_UID=$(id -u) -v $(pwd):/mnt -it blukat29/grpc-devenv:1.20.0 make
+docker run --rm -e MOUNT_GID=$(id -g) -e MOUNT_UID=$(id -u) -v $(pwd):/mnt -it blukat29/grpc-devenv:1.21.0 make
 ```
 
 Or clone this repository and then
