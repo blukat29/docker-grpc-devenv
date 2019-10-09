@@ -19,6 +19,9 @@ RUN apt-get update && apt-get install -y \
   automake libtool curl make g++ unzip \
   && apt-get clean
 
+# Add -fPIC to allow static linking for PIE binaries.
+ENV CFLAGS=-fPIC CXXFLAGS=-fPIC
+
 # install protobuf first, then grpc
 ENV GRPC_RELEASE_TAG v1.21.x
 RUN git clone -b ${GRPC_RELEASE_TAG} https://github.com/grpc/grpc /var/local/git/grpc && \
